@@ -10,6 +10,8 @@
 
 @interface AppDelegate ()
 
+@property NSManagedObjectContext *moc;
+
 @end
 
 @implementation AppDelegate
@@ -52,7 +54,12 @@
 
 - (NSURL *)applicationDocumentsDirectory {
     // The directory the application uses to store the Core Data store file. This code uses a directory named "com.nicholasnaude.GameOfThrones" in the application's documents directory.
-    return [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+
+    NSURL *directory = [[[NSFileManager defaultManager] URLsForDirectory:NSDocumentDirectory inDomains:NSUserDomainMask] lastObject];
+    
+    NSLog(@"%@",directory);
+    
+    return directory;
 }
 
 - (NSManagedObjectModel *)managedObjectModel {

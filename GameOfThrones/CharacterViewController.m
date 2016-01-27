@@ -10,6 +10,8 @@
 
 @interface CharacterViewController ()
 
+@property (weak, nonatomic) IBOutlet UIImageView *characterImageView;
+
 @end
 
 @implementation CharacterViewController
