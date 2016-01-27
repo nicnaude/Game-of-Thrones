@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CharacterViewController.h
 //  GameOfThrones
 //
 //  Created by Nicholas Naudé on 26/01/2016.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CharacterViewController : UIViewController
 
 @end
-
